@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Demo Estética · tu piel, sin prisas</title>
+<meta name="description" content="Demo inventada de un centro de estética. Sin datos reales.">
+<link rel="stylesheet" href="scrollcraft.css">
+<style>
+  :root{--sc-canvas:#1b1517;--sc-surface:#261d20;--sc-ink:#f6eee9;--sc-ink-soft:#c3b0a8;--sc-accent:#e9b8a6;--sc-accent-ink:#1b1517;
+    --sc-font-display:Georgia,"Times New Roman",serif;--sc-font-text:system-ui,sans-serif}
+  .hero-bg{position:absolute;inset:0;background:radial-gradient(60% 50% at 70% 30%,#e9b8a6 0%,transparent 60%),radial-gradient(50% 50% at 20% 80%,#8a5a64 0%,transparent 65%),#1b1517}
+  .hero-copy{position:absolute;left:0;right:0;bottom:12%;padding:0 6vw}
+  .argument{display:grid;place-items:center;text-align:center;padding:0 8vw}
+  .argument p{position:absolute;font:clamp(1.6rem,6vw,3.2rem)/1.15 var(--sc-font-display);max-width:18ch}
+  .rail{display:flex;gap:6vw;align-items:center;height:100%;padding:0 8vw}
+  .item{flex:0 0 min(72vw,380px)}
+  .ph{aspect-ratio:4/5;border-radius:18px;background:linear-gradient(160deg,#e9b8a6,#8a5a64)}
+  .item h3{font:1.5rem var(--sc-font-display);margin:.8rem 0 .2rem}.item p{color:var(--sc-ink-soft);margin:0}
+  .rail__lead{flex:0 0 min(70vw,320px)}
+  .cta{display:inline-block;margin-top:1.4rem;padding:.9rem 1.6rem;border-radius:99px;background:var(--sc-accent);color:var(--sc-accent-ink);text-decoration:none;font-weight:600}
+  .close{display:grid;place-items:center;text-align:center;padding:0 6vw}
+</style>
+</head>
+<body>
+<span data-sc-progress></span>
+<main>
+  <section data-sc-act="pin" data-sc-span="1.6" data-sc-drift="#1b1517">
+    <div data-sc-stage>
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-copy sc-copy" data-sc-cue="0 0.9 0">
+        <h1 class="sc-display sc-display--xl" data-sc-kinetic="lines">Tu piel, sin prisas.</h1>
+        <p class="sc-body">Demo Estética: faciales, depilación y masajes en un solo sitio.</p>
+      </div>
+    </div>
+  </section>
+  <section data-sc-act="pan" data-sc-span="2.6" data-sc-drift="#261d20">
+    <div data-sc-stage>
+      <div class="rail" data-sc-pan="0.06">
+        <div class="rail__lead sc-stack"><h2 class="sc-display sc-display--md">Tratamientos</h2><p class="sc-body">Servicios de ejemplo, inventados.</p></div>
+        <article class="item"><div class="ph" data-sc-tilt="6"></div><h3>Facial hidratante</h3><p>Desde 45 €</p></article>
+        <article class="item"><div class="ph" data-sc-tilt="6"></div><h3>Masaje relajante</h3><p>Desde 55 €</p></article>
+        <article class="item"><div class="ph" data-sc-tilt="6"></div><h3>Manicura y pedicura</h3><p>Desde 30 €</p></article>
+      </div>
+    </div>
+  </section>
+  <section data-sc-act="pin" data-sc-span="1.15" data-sc-drift="#1b1517">
+    <div data-sc-stage class="close" data-sc-spotlight>
+      <div>
+        <h2 class="sc-display sc-display--lg" data-sc-cue="0.06" data-sc-kinetic="lines">Reserva tu cita.</h2>
+        <a class="cta" href="#" data-sc-cue="0.06" data-sc-rise="0">Pedir cita</a>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="scrollcraft.js"></script>
+<script>ScrollCraft.mount(document.body);</script>
+</body></html>
