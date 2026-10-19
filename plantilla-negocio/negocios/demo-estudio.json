@@ -1,0 +1,38 @@
+{
+  "slug": "demo-estudio",
+  "nombre": "Demo Studio",
+  "eyebrow": "Estudio de grabación",
+  "ciudad": "Málaga",
+  "titular": "Tu sonido, terminado.",
+  "sub": "Grabación, mezcla y máster por horas o por proyecto. Trae la maqueta, te llevas el disco.",
+  "cta": "Reservar sala",
+  "whatsapp": "34600000000",
+  "mensajeWhatsapp": "Hola, quiero reservar sala en el estudio",
+  "direccion": "Polígono de Ejemplo, nave 8, Málaga",
+  "nota": "Datos de ejemplo. Demo sin negocio real.",
+  "horario": [["Lun a Sáb", "11:00 a 23:00"], ["Domingo", "Con reserva"], ["Primera visita", "Sin coste"]],
+  "motivo": "ondas",
+  "colores": { "fondo": "#0b0a14", "superficie": "#14122a", "texto": "#f3f1fb", "suave": "#b0abd0", "acento": "#c6ff4d", "acentoTexto": "#12120a", "a": "#7a5cff", "b": "#ff4fa3", "c": "#27d3ff" },
+  "fuentes": { "display": "'Space Grotesk', system-ui, sans-serif", "texto": "'Inter', system-ui, sans-serif", "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" },
+  "mensaje": ["Una buena canción merece una buena toma.", "Y una buena toma, un buen oído.", "Vamos a grabarla."],
+  "serviciosTitulo": "De la maqueta al máster.",
+  "serviciosTexto": "Tarifas de ejemplo. Si traes banda, hacemos paquete.",
+  "servicios": [
+    { "nombre": "Grabación por horas", "desc": "Sala viva, cabina de voz y técnico incluido.", "precio": "Desde 25 €/h" },
+    { "nombre": "Mezcla", "desc": "Por canción, con dos revisiones incluidas.", "precio": "Desde 120 €" },
+    { "nombre": "Máster", "desc": "Listo para plataformas y para vinilo.", "precio": "Desde 60 €" },
+    { "nombre": "Producción de EP", "desc": "Cuatro canciones, de principio a fin.", "precio": "Presupuesto" }
+  ],
+  "numerosTitulo": "Aquí se hace música de verdad.",
+  "numeros": [
+    { "valor": 9, "sufijo": "", "etiqueta": "años en marcha (ejemplo)" },
+    { "valor": 320, "sufijo": "+", "etiqueta": "canciones terminadas (ejemplo)" },
+    { "valor": 2, "sufijo": "", "etiqueta": "salas de grabación (ejemplo)" }
+  ],
+  "pasos": [
+    { "t": "Mándanos la maqueta", "d": "Por WhatsApp. La escuchamos antes de cobrarte nada." },
+    { "t": "Reservamos sala", "d": "Eliges día y horas. Te explicamos qué traer." },
+    { "t": "Grabamos, mezclamos, masterizamos", "d": "Sales con el disco y los archivos para subirlo." }
+  ],
+  "cierreTitulo": "Reserva tu sala."
+}

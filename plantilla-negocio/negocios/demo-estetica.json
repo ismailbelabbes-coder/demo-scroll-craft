@@ -1,0 +1,39 @@
+{
+  "slug": "demo-estetica",
+  "nombre": "Demo Estética",
+  "eyebrow": "Centro de estética",
+  "ciudad": "Málaga",
+  "titular": "Tu piel, sin prisas.",
+  "sub": "Faciales, depilación y masajes con cita previa. Un rato solo para ti.",
+  "cta": "Pedir cita",
+  "whatsapp": "34600000000",
+  "mensajeWhatsapp": "Hola, me gustaría pedir cita",
+  "direccion": "Calle de Ejemplo 12, Málaga",
+  "nota": "Datos de ejemplo. Demo sin negocio real.",
+  "horario": [["Lun a Vie", "10:00 a 20:00"], ["Sábado", "10:00 a 14:00"], ["Domingo", "Cerrado"]],
+  "motivo": "petalos",
+  "colores": { "fondo": "#1b1417", "superficie": "#261b20", "texto": "#f8efe9", "suave": "#c9b3ab", "acento": "#f0b9a4", "acentoTexto": "#2a1519", "a": "#f0b9a4", "b": "#b8647a", "c": "#7c3f58" },
+  "fuentes": { "display": "'Fraunces', Georgia, serif", "texto": "'Inter', system-ui, sans-serif", "url": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;600&display=swap" },
+  "mensaje": ["Cuidarte no es un lujo.", "Es media hora al día que te debes.", "Empieza hoy."],
+  "serviciosTitulo": "Lo que hacemos por ti.",
+  "serviciosTexto": "Precios de ejemplo. Cada tratamiento empieza con una valoración gratuita.",
+  "servicios": [
+    { "nombre": "Facial hidratante", "desc": "Limpieza profunda y mascarilla a medida.", "precio": "Desde 45 €" },
+    { "nombre": "Masaje relajante", "desc": "Cuarenta y cinco minutos para soltar tensión.", "precio": "Desde 55 €" },
+    { "nombre": "Depilación láser", "desc": "Bono de sesiones, sin sorpresas.", "precio": "Desde 30 €" },
+    { "nombre": "Manicura y pedicura", "desc": "Cuidado de manos y pies, con esmalte semipermanente.", "precio": "Desde 28 €" }
+  ],
+  "numerosTitulo": "Un trato cercano, con cifras de ejemplo.",
+  "numeros": [
+    { "valor": 12, "sufijo": "+", "etiqueta": "años de oficio (ejemplo)" },
+    { "valor": 4800, "sufijo": "", "etiqueta": "citas al año (ejemplo)" },
+    { "valor": 49, "sufijo": "/5", "etiqueta": "valoración (ejemplo)" }
+  ],
+  "pasos": [
+    { "t": "Nos escribes por WhatsApp", "d": "Cuéntanos qué necesitas. Respondemos el mismo día." },
+    { "t": "Valoración gratuita", "d": "Vemos tu piel y te proponemos un plan sin compromiso." },
+    { "t": "Vienes y te olvidas del reloj", "d": "Cita puntual, cabina tranquila, cero prisas." }
+  ],
+  "cierreTitulo": "Reserva tu hueco.",
+  "cierreTituloAlt": ""
+}

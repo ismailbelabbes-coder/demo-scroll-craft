@@ -1,0 +1,71 @@
+<!doctype html><meta charset="utf-8"><canvas id="c"></canvas>
+<script>
+// Generador de arte procedural (sin fotos, sin APIs). window.render(cfg, w, h, t, seed) -> dataURL PNG
+const rnd = (s) => () => (s = (s * 16807) % 2147483647) / 2147483647;
+const hex = (h, a = 1) => { const n = parseInt(h.slice(1), 16); return `rgba(${n >> 16},${(n >> 8) & 255},${n & 255},${a})`; };
+let grain;
+function makeGrain(w, h) {
+  const g = document.createElement('canvas'); g.width = w; g.height = h; const x = g.getContext('2d');
+  const d = x.createImageData(w, h); const r = rnd(7);
+  for (let i = 0; i < d.data.length; i += 4) { const v = 128 + (r() - .5) * 90; d.data[i] = d.data[i + 1] = d.data[i + 2] = v; d.data[i + 3] = 255; }
+  x.putImageData(d, 0, 0); return g;
+}
+window.render = (cfg, w, h, t, seed) => {
+  const c = document.getElementById('c'); c.width = w; c.height = h; const x = c.getContext('2d');
+  const P = cfg.colores, R = rnd(seed * 97 + 13), S = Math.min(w, h);
+  x.fillStyle = P.fondo; x.fillRect(0, 0, w, h);
+  const cols = [P.a, P.b, P.c, P.a, P.b];
+  const T = Math.PI * 2;
+  // 1) orbes de luz que derivan con t
+  x.globalCompositeOperation = 'screen';
+  for (let i = 0; i < 5; i++) {
+    const ph = R(), k = 1 + Math.floor(R() * 2), ax = .22 + R() * .22, ay = .18 + R() * .25;
+    const cx = w * (.5 + ax * Math.sin(T * (t * k + ph))), cy = h * (.5 + ay * Math.cos(T * (t * k + ph * 1.7)));
+    const rad = S * (.7 + R() * .55);
+    const g = x.createRadialGradient(cx, cy, 0, cx, cy, rad);
+    g.addColorStop(0, hex(cols[i], .78)); g.addColorStop(.5, hex(cols[i], .26)); g.addColorStop(1, hex(cols[i], 0));
+    x.fillStyle = g; x.fillRect(0, 0, w, h);
+  }
+  x.globalCompositeOperation = 'source-over';
+  // 2) motivo segun el negocio
+  x.lineCap = 'round';
+  const m = cfg.motivo;
+  if (m === 'ondas') {
+    for (let i = 0; i < 9; i++) {
+      x.beginPath(); const amp = h * (.03 + i * .006), y0 = h * (.2 + i * .075);
+      for (let px = 0; px <= w; px += 6) {
+        const y = y0 + Math.sin(px / w * T * (1.5 + i * .12) + T * t * 2 + i) * amp * (.4 + Math.sin(px / w * Math.PI));
+        px ? x.lineTo(px, y) : x.moveTo(px, y);
+      }
+      x.strokeStyle = hex(i % 2 ? P.b : P.a, .22 + (i % 3) * .1); x.lineWidth = S * .004 + (i % 3); x.stroke();
+    }
+  } else if (m === 'anillos') {
+    const cx = w * (.5 + .12 * Math.sin(T * t)), cy = h * .46;
+    for (let i = 1; i <= 9; i++) {
+      x.beginPath(); x.arc(cx, cy, S * (.08 + i * .075 + .02 * Math.sin(T * (t + i / 9))), 0, T);
+      x.strokeStyle = hex(i % 2 ? P.a : P.c, .1 + .22 / i); x.lineWidth = 1 + S * .002; x.stroke();
+    }
+  } else if (m === 'lineas') {
+    x.save(); x.translate(w / 2, h / 2); x.rotate(-.5);
+    for (let i = -22; i <= 22; i++) {
+      const o = (i * S * .045 + t * S * .09) % (S * 2);
+      x.beginPath(); x.moveTo(-w * 1.2, o); x.lineTo(w * 1.2, o);
+      x.strokeStyle = hex(P.b, .05 + .12 * Math.abs(Math.sin(i * .6))); x.lineWidth = 1 + (i % 4 === 0 ? 2 : 0); x.stroke();
+    }
+    x.restore();
+  } else { // petalos / arcos suaves
+    for (let i = 0; i < 6; i++) {
+      x.save(); x.translate(w * .5, h * .56); x.rotate(T * (i / 6) + t * .6);
+      const g = x.createLinearGradient(0, 0, 0, -S * .55);
+      g.addColorStop(0, hex(P.a, 0)); g.addColorStop(1, hex(i % 2 ? P.b : P.a, .26));
+      x.fillStyle = g; x.beginPath(); x.ellipse(0, -S * .27, S * .1, S * .28, 0, 0, T); x.fill(); x.restore();
+    }
+  }
+  // 3) vineta y grano estatico (el grano fijo no parpadea y evita el banding)
+  const v = x.createRadialGradient(w / 2, h / 2, S * .25, w / 2, h / 2, Math.max(w, h) * .75);
+  v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, hex(P.fondo, .7)); x.fillStyle = v; x.fillRect(0, 0, w, h);
+  if (!grain || grain.width !== w) grain = makeGrain(w, h);
+  x.globalCompositeOperation = 'overlay'; x.globalAlpha = .12; x.drawImage(grain, 0, 0); x.globalAlpha = 1; x.globalCompositeOperation = 'source-over';
+  return c.toDataURL('image/png');
+};
+</script>

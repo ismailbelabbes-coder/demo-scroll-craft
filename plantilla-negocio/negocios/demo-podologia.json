@@ -1,0 +1,38 @@
+{
+  "slug": "demo-podologia",
+  "nombre": "Demo Podología",
+  "eyebrow": "Clínica de podología",
+  "ciudad": "Málaga",
+  "titular": "Camina sin dolor.",
+  "sub": "Estudio de la pisada, quiropodia y plantillas a medida. Cita en 48 horas.",
+  "cta": "Pedir cita",
+  "whatsapp": "34600000000",
+  "mensajeWhatsapp": "Hola, quiero pedir cita en la clínica",
+  "direccion": "Avenida de Ejemplo 5, Málaga",
+  "nota": "Datos de ejemplo. Demo sin negocio real.",
+  "horario": [["Lun a Vie", "9:30 a 19:30"], ["Sábado", "Con cita"], ["Domingo", "Cerrado"]],
+  "motivo": "anillos",
+  "colores": { "fondo": "#0c1a1f", "superficie": "#12262d", "texto": "#eef6f4", "suave": "#a9c2bf", "acento": "#7fe0c9", "acentoTexto": "#06201b", "a": "#3fb8a6", "b": "#2c7ea8", "c": "#7fe0c9" },
+  "fuentes": { "display": "'DM Serif Display', Georgia, serif", "texto": "'DM Sans', system-ui, sans-serif", "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&family=DM+Serif+Display&display=swap" },
+  "mensaje": ["Cada paso cuenta.", "Un dolor pequeño hoy, un problema grande mañana.", "Vamos a quitártelo."],
+  "serviciosTitulo": "Tu pie, en buenas manos.",
+  "serviciosTexto": "Precios de ejemplo. La primera valoración es sin compromiso.",
+  "servicios": [
+    { "nombre": "Estudio de la pisada", "desc": "Análisis en cinta y plan personalizado.", "precio": "Desde 40 €" },
+    { "nombre": "Quiropodia", "desc": "Callosidades, durezas y uñas, sin dolor.", "precio": "Desde 25 €" },
+    { "nombre": "Plantillas a medida", "desc": "Fabricadas para tu pisada y tu calzado.", "precio": "Desde 90 €" },
+    { "nombre": "Uña encarnada", "desc": "Tratamiento y seguimiento hasta el alta.", "precio": "Desde 35 €" }
+  ],
+  "numerosTitulo": "Menos molestias, más días buenos.",
+  "numeros": [
+    { "valor": 15, "sufijo": "+", "etiqueta": "años de experiencia (ejemplo)" },
+    { "valor": 2400, "sufijo": "", "etiqueta": "pacientes atendidos (ejemplo)" },
+    { "valor": 48, "sufijo": " h", "etiqueta": "para tu primera cita (ejemplo)" }
+  ],
+  "pasos": [
+    { "t": "Escríbenos", "d": "Cuéntanos dónde te duele. Te damos hueco en 48 horas." },
+    { "t": "Valoración", "d": "Revisamos tu pisada y te explicamos qué pasa, sin tecnicismos." },
+    { "t": "Tratamiento y seguimiento", "d": "Te acompañamos hasta que vuelvas a caminar sin pensar en ello." }
+  ],
+  "cierreTitulo": "Pide tu cita hoy."
+}

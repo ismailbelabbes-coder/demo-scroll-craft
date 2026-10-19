@@ -1,0 +1,38 @@
+{
+  "slug": "demo-academia",
+  "nombre": "Demo Academia",
+  "eyebrow": "Academia de idiomas",
+  "ciudad": "Málaga",
+  "titular": "Habla de verdad.",
+  "sub": "Grupos reducidos de ocho personas y profesores nativos. Clase de prueba gratis.",
+  "cta": "Clase de prueba",
+  "whatsapp": "34600000000",
+  "mensajeWhatsapp": "Hola, quiero una clase de prueba",
+  "direccion": "Calle de Ejemplo 30, Málaga",
+  "nota": "Datos de ejemplo. Demo sin negocio real.",
+  "horario": [["Lun a Jue", "9:00 a 21:30"], ["Viernes", "9:00 a 14:00"], ["Matrícula", "Todo el año"]],
+  "motivo": "lineas",
+  "colores": { "fondo": "#0e1220", "superficie": "#171d33", "texto": "#f4f6ff", "suave": "#a9b2d4", "acento": "#ffc857", "acentoTexto": "#231800", "a": "#4b6bff", "b": "#ffc857", "c": "#7cd4ff" },
+  "fuentes": { "display": "'Sora', system-ui, sans-serif", "texto": "'Inter', system-ui, sans-serif", "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Sora:wght@500;700&display=swap" },
+  "mensaje": ["Estudiar un idioma no es memorizar.", "Es atreverse a hablarlo.", "Aquí te atreves."],
+  "serviciosTitulo": "Elige tu ritmo.",
+  "serviciosTexto": "Precios de ejemplo. Matrícula gratuita este mes.",
+  "servicios": [
+    { "nombre": "Inglés en grupo", "desc": "Ocho personas como máximo, niveles A1 a C1.", "precio": "Desde 55 €/mes" },
+    { "nombre": "Preparación de exámenes", "desc": "Cambridge y otras titulaciones oficiales.", "precio": "Desde 70 €/mes" },
+    { "nombre": "Clases particulares", "desc": "Horario flexible, plan a tu medida.", "precio": "Desde 22 €/h" },
+    { "nombre": "Para empresas", "desc": "Grupos en tu oficina o en la nuestra.", "precio": "Presupuesto" }
+  ],
+  "numerosTitulo": "Resultados que se oyen.",
+  "numeros": [
+    { "valor": 8, "sufijo": "", "etiqueta": "alumnos por grupo (ejemplo)" },
+    { "valor": 20, "sufijo": "+", "etiqueta": "años enseñando (ejemplo)" },
+    { "valor": 95, "sufijo": " %", "etiqueta": "aprueban a la primera (ejemplo)" }
+  ],
+  "pasos": [
+    { "t": "Reserva tu clase de prueba", "d": "Gratis y sin compromiso, por WhatsApp." },
+    { "t": "Prueba de nivel", "d": "Diez minutos para saber en qué grupo encajas." },
+    { "t": "Empiezas cuando quieras", "d": "Hay plazas todo el año, con horario de mañana y tarde." }
+  ],
+  "cierreTitulo": "Tu primera clase es gratis."
+}
