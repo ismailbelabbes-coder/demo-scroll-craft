@@ -23,3 +23,6 @@ Esta carpeta es una plantilla pública. NO guardes aquí datos reales de cliente
 
 ## Entrega
 Deja la demo en `dist/<slug>/` en tu copia, no publiques ni hagas push, y termina con un informe corto: qué se hizo, qué falta (fotos reales, precio, dominio) y cómo verlo.
+
+## Sistema de diseño
+Lee `DESIGN.md` de la raíz antes de diseñar: tokens de color, escala tipográfica, espaciado, componentes y reglas de movimiento.
