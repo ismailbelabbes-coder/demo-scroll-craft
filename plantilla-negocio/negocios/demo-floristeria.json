@@ -1,0 +1,39 @@
+{
+  "slug": "demo-floristeria",
+  "nombre": "Demo Floristería",
+  "eyebrow": "Floristería",
+  "ciudad": "Málaga",
+  "titular": "Flores que dicen algo.",
+  "sub": "Ramos, centros y encargos para cada ocasión, con entrega a domicilio en Málaga.",
+  "cta": "Hacer un encargo",
+  "whatsapp": "34600000000",
+  "mensajeWhatsapp": "Hola, quiero hacer un encargo de flores",
+  "direccion": "Calle de Ejemplo 8, Málaga",
+  "nota": "Datos de ejemplo. Demo sin negocio real.",
+  "horario": [["Lun a Vie", "10:00 a 20:00"], ["Sábado", "10:00 a 14:00"], ["Domingo", "Cerrado"]],
+  "motivo": "petalos",
+  "colores": { "fondo": "#14201a", "superficie": "#1c2b23", "texto": "#f6efe6", "suave": "#b9c7bb", "acento": "#f2a6b5", "acentoTexto": "#2a1219", "a": "#f2a6b5", "b": "#d9728a", "c": "#7a9a6e" },
+  "fuentes": { "display": "'Fraunces', Georgia, serif", "texto": "'Inter', system-ui, sans-serif", "url": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;600&display=swap" },
+  "mensaje": ["Unas flores dicen lo que no sale en palabras.", "Frescas cada mañana, preparadas a mano.", "Dinos para quién son y lo demás va de nuestra cuenta."],
+  "serviciosTitulo": "Lo que preparamos.",
+  "serviciosTexto": "Precios de ejemplo. Cada encargo se ajusta a lo que necesitas.",
+  "servicios": [
+    { "nombre": "Ramos de temporada", "desc": "Flores frescas del día, atadas a mano.", "precio": "Desde 25 €" },
+    { "nombre": "Centros y plantas", "desc": "Para casa, mesa o regalo, con maceta incluida.", "precio": "Desde 30 €" },
+    { "nombre": "Bodas y eventos", "desc": "Diseño floral a medida, desde el ramo hasta la mesa.", "precio": "A medida" },
+    { "nombre": "Flores cada semana", "desc": "Un ramo nuevo en tu puerta o en tu negocio.", "precio": "Desde 18 €" }
+  ],
+  "numerosTitulo": "Un trato cercano, con cifras de ejemplo.",
+  "numeros": [
+    { "valor": 15, "sufijo": "+", "etiqueta": "años de oficio (ejemplo)" },
+    { "valor": 3200, "sufijo": "", "etiqueta": "ramos al año (ejemplo)" },
+    { "valor": 50, "sufijo": "/5", "etiqueta": "valoración (ejemplo)" }
+  ],
+  "pasos": [
+    { "t": "Nos escribes por WhatsApp", "d": "Cuéntanos la ocasión y el presupuesto. Respondemos el mismo día." },
+    { "t": "Elegimos el ramo juntos", "d": "Te proponemos opciones con fotos reales antes de prepararlo." },
+    { "t": "Lo recoges o te lo llevamos", "d": "Entrega a domicilio en Málaga, cuando tú digas." }
+  ],
+  "cierreTitulo": "Haz tu encargo.",
+  "cierreTituloAlt": ""
+}

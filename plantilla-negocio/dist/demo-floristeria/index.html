@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Demo Floristería · Málaga</title>
+<meta name="description" content="Ramos, centros y encargos para cada ocasión, con entrega a domicilio en Málaga.">
+<meta name="theme-color" content="#14201a">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23f2a6b5'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&amp;family=Inter:wght@400;600&amp;display=swap">
+<link rel="preload" as="image" href="poster-m.webp" media="(max-width:860px)"><link rel="preload" as="image" href="poster.webp" media="(min-width:861px)">
+<link rel="stylesheet" href="scrollcraft.css">
+<style>
+:root{--sc-canvas:#14201a;--sc-surface:#1c2b23;--sc-ink:#f6efe6;--sc-ink-soft:#b9c7bb;--sc-accent:#f2a6b5;--sc-accent-ink:#2a1219;
+ --sc-font-display:'Fraunces', Georgia, serif;--sc-font-text:'Inter', system-ui, sans-serif}
+html{scroll-behavior:auto}
+body{padding-bottom:env(safe-area-inset-bottom)}
+.bar{position:fixed;inset:0 0 auto 0;z-index:70;display:flex;justify-content:space-between;align-items:center;padding:.9rem var(--sc-gutter);
+ background:linear-gradient(to bottom,color-mix(in oklab,var(--sc-canvas) 82%,transparent),transparent)}
+.brand{font:600 1.05rem var(--sc-font-display);letter-spacing:.01em;color:var(--sc-ink);text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.35rem;border-radius:999px;background:var(--sc-accent);color:var(--sc-accent-ink);
+ font:600 .95rem var(--sc-font-text);text-decoration:none;box-shadow:var(--sc-e2),var(--sc-edge);transition:transform var(--sc-d-base) var(--sc-ease-out)}
+.btn:hover{transform:translateY(-2px)}
+.btn--ghost{background:transparent;color:var(--sc-ink);box-shadow:inset 0 0 0 1px var(--sc-hairline-strong)}
+.hero-copy h1{max-width:13ch;margin:.4rem 0 1rem}
+.hero-copy .sc-body{margin-bottom:1.6rem;font-size:var(--sc-t-lg);color:color-mix(in oklab,var(--sc-ink) 82%,transparent)}
+.row{display:flex;flex-wrap:wrap;gap:.7rem}
+.argument{display:grid;align-content:center;padding:0 var(--sc-gutter);background:radial-gradient(70% 60% at 80% 20%,color-mix(in oklab,var(--sc-accent) 14%,transparent),transparent 70%),var(--sc-surface)}
+.argument p{position:absolute;left:var(--sc-gutter);right:var(--sc-gutter);margin:0;font:400 clamp(1.9rem,6.2vw,4.4rem)/1.08 var(--sc-font-display);letter-spacing:-.025em;max-width:20ch;top:50%;translate:0 -50%}
+.argument p:last-child{color:var(--sc-accent)}
+.rail{align-items:center;height:100%;gap:clamp(1rem,3vw,2.2rem);padding:0 var(--sc-gutter)}
+.rail__lead{flex:0 0 min(78vw,26rem)}
+.card{flex:0 0 min(74vw,22rem);border-radius:var(--sc-r-lg);background:var(--sc-surface);overflow:hidden;box-shadow:var(--sc-e3),var(--sc-edge)}
+.card__img img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;max-height:46svh}
+.card__txt{padding:1.1rem 1.2rem 1.3rem}.card h3{font:600 1.35rem var(--sc-font-display);margin:0 0 .3rem}
+.card p{margin:0 0 .8rem;color:var(--sc-ink-soft);font-size:var(--sc-t-sm)}.price{font:600 .9rem var(--sc-font-text);color:var(--sc-accent)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:2rem 1.5rem;margin-top:3rem}
+.stat b{display:flex;align-items:baseline;white-space:nowrap;font-size:var(--sc-t-3xl);color:var(--sc-accent);line-height:1}.stat span:last-child{display:block;margin-top:.5rem;color:var(--sc-ink-soft)}
+.steps{list-style:none;margin:3rem 0 0;padding:0;display:grid;gap:1.6rem;counter-reset:s}
+.steps li{display:flex;gap:1.2rem;align-items:flex-start;padding-top:1.4rem;border-top:1px solid var(--sc-hairline)}
+.steps .n{flex:none;width:2.6rem;height:2.6rem;border-radius:50%;display:grid;place-items:center;font:600 1rem var(--sc-font-text);background:var(--sc-accent);color:var(--sc-accent-ink)}
+.steps h3{margin:0 0 .25rem;font:600 1.3rem var(--sc-font-display)}.steps p{margin:0;color:var(--sc-ink-soft)}
+.close{display:grid;place-items:center;text-align:center;padding:0 var(--sc-gutter);background:radial-gradient(60% 50% at 50% 55%,color-mix(in oklab,var(--sc-accent) 20%,transparent),transparent 72%),var(--sc-canvas)}
+.close h2{max-width:14ch;margin:0 auto 1.6rem}.close .row{justify-content:center}
+.info{position:absolute;left:var(--sc-gutter);right:var(--sc-gutter);bottom:max(1.5rem,env(safe-area-inset-bottom));display:flex;flex-wrap:wrap;gap:1rem 3rem;justify-content:space-between;
+ color:var(--sc-ink-soft);font-size:var(--sc-t-sm);text-align:left}
+.info ul{list-style:none;margin:0;padding:0}.info li{display:flex;gap:1rem;justify-content:space-between}.info small{display:block;margin-top:.6rem;opacity:.7}
+.dock{display:none}
+.dock{transition:opacity .35s var(--sc-ease-out),transform .35s var(--sc-ease-out)}.dock.is-off{opacity:0;transform:translateY(120%);pointer-events:none}
+@media(max-width:860px){
+ .dock{position:fixed;z-index:80;left:.8rem;right:.8rem;bottom:max(.8rem,env(safe-area-inset-bottom));display:flex;gap:.6rem;padding:.5rem;border-radius:999px;
+  background:color-mix(in oklab,var(--sc-surface) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:var(--sc-e3),var(--sc-edge)}
+ .dock .btn{flex:1;justify-content:center;padding:.85rem .5rem}.bar .btn{display:none}.info{bottom:5.6rem}
+ .hero-copy{bottom:6.5rem!important}}
+@media(prefers-reduced-motion:reduce){.sc-has-clip video{display:none}}
+</style>
+</head>
+<body>
+<span data-sc-progress></span>
+<header class="bar"><a class="brand" href="#top">Demo Floristería</a><a class="btn" href="https://wa.me/34600000000?text=Hola%2C%20quiero%20hacer%20un%20encargo%20de%20flores">Hacer un encargo</a></header>
+<nav class="dock" aria-label="Contacto"><a class="btn" href="https://wa.me/34600000000?text=Hola%2C%20quiero%20hacer%20un%20encargo%20de%20flores">Hacer un encargo</a><a class="btn btn--ghost" href="tel:+34600000000">Llamar</a></nav>
+<main id="top">
+
+<section data-sc-act="scrub" data-sc-span="2.2" data-sc-dwell="0.3" data-sc-drift="#14201a">
+  <div data-sc-stage>
+    <picture><source media="(max-width:860px)" srcset="poster-m.webp"><img class="sc-stage__poster" src="poster.webp" alt="" fetchpriority="high"></picture>
+    <video data-sc-scrub data-sc-src="hero.mp4" data-sc-src-mobile="hero-m.mp4" muted playsinline preload="none"></video>
+    <div class="sc-scrim sc-scrim--band" aria-hidden="true"></div>
+    <div class="sc-copy sc-copy--lead hero-copy" data-sc-cue="0 0.85 0">
+      <span class="sc-eyebrow">Floristería · Málaga</span>
+      <h1 class="sc-display sc-display--xl" data-sc-kinetic="lines">Flores que dicen algo.</h1>
+      <p class="sc-body">Ramos, centros y encargos para cada ocasión, con entrega a domicilio en Málaga.</p>
+      <div class="row"><a class="btn" href="https://wa.me/34600000000?text=Hola%2C%20quiero%20hacer%20un%20encargo%20de%20flores" data-sc-magnet="0.25">Hacer un encargo</a><a class="btn btn--ghost" href="#servicios">Ver servicios</a></div>
+    </div>
+  </div>
+</section>
+
+<section data-sc-act="pin" data-sc-span="3.8" data-sc-drift="#1c2b23">
+  <div data-sc-stage class="argument">
+      <p data-sc-cue="0 0.31">Unas flores dicen lo que no sale en palabras.</p>
+      <p data-sc-cue="0.29 0.65">Frescas cada mañana, preparadas a mano.</p>
+      <p data-sc-cue="0.63">Dinos para quién son y lo demás va de nuestra cuenta.</p>
+  </div>
+</section>
+
+<section id="servicios" data-sc-act="pan" data-sc-span="5.0" data-sc-drift="#14201a">
+  <div data-sc-stage>
+    <div class="rail" data-sc-pan="0.08">
+      <div class="rail__lead sc-stack"><span class="sc-eyebrow">Servicios</span>
+        <h2 class="sc-display sc-display--lg">Lo que preparamos.</h2><p class="sc-body">Precios de ejemplo. Cada encargo se ajusta a lo que necesitas.</p></div>
+        <article class="card" data-sc-tilt="5">
+          <div class="card__img"><img src="servicio-0.webp" width="640" height="800" alt="" loading="lazy" decoding="async"></div>
+          <div class="card__txt"><h3>Ramos de temporada</h3><p>Flores frescas del día, atadas a mano.</p><span class="price">Desde 25 €</span></div>
+        </article>
+        <article class="card" data-sc-tilt="5">
+          <div class="card__img"><img src="servicio-1.webp" width="640" height="800" alt="" loading="lazy" decoding="async"></div>
+          <div class="card__txt"><h3>Centros y plantas</h3><p>Para casa, mesa o regalo, con maceta incluida.</p><span class="price">Desde 30 €</span></div>
+        </article>
+        <article class="card" data-sc-tilt="5">
+          <div class="card__img"><img src="servicio-2.webp" width="640" height="800" alt="" loading="lazy" decoding="async"></div>
+          <div class="card__txt"><h3>Bodas y eventos</h3><p>Diseño floral a medida, desde el ramo hasta la mesa.</p><span class="price">A medida</span></div>
+        </article>
+        <article class="card" data-sc-tilt="5">
+          <div class="card__img"><img src="servicio-3.webp" width="640" height="800" alt="" loading="lazy" decoding="async"></div>
+          <div class="card__txt"><h3>Flores cada semana</h3><p>Un ramo nuevo en tu puerta o en tu negocio.</p><span class="price">Desde 18 €</span></div>
+        </article>
+    </div>
+  </div>
+</section>
+
+<section class="sc-section" data-sc-act="flow" data-sc-drift="#1c2b23">
+  <div class="sc-wrap">
+    <div class="sc-stack" data-sc-in><span class="sc-eyebrow">En cifras</span>
+      <h2 class="sc-display sc-display--lg" data-sc-kinetic="lines">Un trato cercano, con cifras de ejemplo.</h2></div>
+    <div class="stats" data-sc-in data-sc-stagger="90">
+        <div class="stat"><b class="sc-display"><span data-sc-count="0 15">15</span>+</b><span>años de oficio (ejemplo)</span></div>
+        <div class="stat"><b class="sc-display"><span data-sc-count="0 3200">3200</span></b><span>ramos al año (ejemplo)</span></div>
+        <div class="stat"><b class="sc-display"><span data-sc-count="0 50">50</span>/5</b><span>valoración (ejemplo)</span></div></div>
+    <ol class="steps" data-sc-in data-sc-stagger="110">
+        <li><span class="n">1</span><div><h3>Nos escribes por WhatsApp</h3><p>Cuéntanos la ocasión y el presupuesto. Respondemos el mismo día.</p></div></li>
+        <li><span class="n">2</span><div><h3>Elegimos el ramo juntos</h3><p>Te proponemos opciones con fotos reales antes de prepararlo.</p></div></li>
+        <li><span class="n">3</span><div><h3>Lo recoges o te lo llevamos</h3><p>Entrega a domicilio en Málaga, cuando tú digas.</p></div></li></ol>
+  </div>
+</section>
+
+<section id="contacto" data-sc-act="pin" data-sc-span="1.15" data-sc-drift="#14201a">
+  <div data-sc-stage class="close" data-sc-spotlight>
+    <div>
+      <h2 class="sc-display sc-display--lg" data-sc-cue="0.05" data-sc-kinetic="lines">Haz tu encargo.</h2>
+      <div class="row"><a class="btn" href="https://wa.me/34600000000?text=Hola%2C%20quiero%20hacer%20un%20encargo%20de%20flores" data-sc-magnet="0.26" data-sc-cue="0.05" data-sc-rise="0">Hacer un encargo</a>
+      <a class="btn btn--ghost" href="tel:+34600000000" data-sc-cue="0.05" data-sc-rise="0">Llamar</a></div>
+    </div>
+    <div class="info" data-sc-cue="0.05" data-sc-rise="0"><div><b>Demo Floristería</b><br>Calle de Ejemplo 8, Málaga<small>Datos de ejemplo. Demo sin negocio real.</small></div><ul><li><span>Lun a Vie</span><span>10:00 a 20:00</span></li><li><span>Sábado</span><span>10:00 a 14:00</span></li><li><span>Domingo</span><span>Cerrado</span></li></ul></div>
+  </div>
+</section>
+</main>
+<script src="scrollcraft.js"></script>
+<script>ScrollCraft.mount(document.body);(function(){var d=document.querySelector('.dock'),o=null;function u(){var off=scrollY<innerHeight*.9;if(off!==o){o=off;d.classList.toggle('is-off',off)}}addEventListener('scroll',u,{passive:true});u()})();</script>
+</body>
+</html>
